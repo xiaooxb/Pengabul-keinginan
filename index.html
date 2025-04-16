@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ACUMALAKA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="high">Jika Anda ingin...</h1>
+  <p class="high"><strong>HAYOOO,</strong> ingin apa? Silahkan beritahu Choky, namun isi form dulu</p>
+
+  <form onsubmit="return konfirm()">
+    <label for="nama">Siapa nama kamu?</label><br>
+    <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required minlength="3"><br><br>
+
+    <label for="keinginan">Apa yang kamu inginkan?</label><br>
+    <input type="text" id="keinginan" name="keinginan" placeholder="Masukan Keinginan" required minlength="3"><br><br>
+
+    <label for="usia">Berapa usia kamu?</label><br>
+    <input type="number" id="usia" name="usia" placeholder="Masukkan usia" required min="1"><br><br>
+
+    <button type="submit">BERITAHU</button>
+  </form>
+
+  <footer>©zhevery</footer>
+
+  <!-- Masukkan script.js dengan benar -->
+  <script src="script.js"></script>
+</body>
+</html>
