@@ -1,18 +1,53 @@
-<!DOCTYYPE html>
-  <html>
-    <head><title>RICKROLLED</title>
-    <link rel="stylesheet" href="style.css"
-    
-    </head>
-    <body>
-       <div class="rr">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RICKROLLED</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Sembunyikan konten awal */
+      .rr {
+        display: none;
+        text-align: center;
+      }
+
+      #playBtn {
+        display: block;
+        margin: 100px auto;
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Tombol utama -->
+    <button id="playBtn">Klik Untuk Lanjut</button>
+
+    <!-- Konten yang akan muncul setelah diklik -->
+    <div class="rr" id="konten">
       <h1>GOT RICKROLLED</h1>
-      <img src="Rickrolling.gif"
-     
-     <p> SILAKAN BACK KE HALAMAN SEBELUMNYA </p>
-      <h1> KAMU KENA PRENKK </h1>
-      </div>
-    </body>
-    
-    
-  </html>
+      <img src="Rickrolling.gif" alt="Rickroll" />
+      
+      <audio id="rickAudio">
+        <source src="idiot.mp3" type="audio/mpeg">
+        Browser tidak mendukung audio.
+      </audio>
+
+      <p>SILAKAN BACK KE HALAMAN SEBELUMNYA</p>
+      <h1>KAMU KENA PRENKK</h1>
+    </div>
+
+    <script>
+      const playBtn = document.getElementById('playBtn');
+      const konten = document.getElementById('konten');
+      const audio = document.getElementById('rickAudio');
+
+      playBtn.addEventListener('click', function () {
+        playBtn.style.display = 'none';    // sembunyikan tombol
+        konten.style.display = 'block';    // tampilkan konten
+        audio.play();                      // putar musik
+      });
+    </script>
+  </body>
+</html>
