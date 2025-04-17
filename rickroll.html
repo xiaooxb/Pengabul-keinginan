@@ -29,7 +29,8 @@
       <h1>GOT RICKROLLED</h1>
       <img src="Rickrolling.gif" alt="Rickroll" />
       
-      <audio id="rickAudio">
+      <!-- Audio dengan looping -->
+      <audio id="rickAudio" loop>
         <source src="idiot.mp3" type="audio/mpeg">
         Browser tidak mendukung audio.
       </audio>
@@ -46,7 +47,7 @@
       playBtn.addEventListener('click', function () {
         playBtn.style.display = 'none';    // sembunyikan tombol
         konten.style.display = 'block';    // tampilkan konten
-        audio.play();                      // putar musik
+        audio.play();                      // putar musik berulang
       });
     </script>
   </body>
